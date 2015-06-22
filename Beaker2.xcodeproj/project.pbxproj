@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		266D3F9F1B37DD6B0074F0CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D3F9E1B37DD6B0074F0CB /* AppDelegate.swift */; };
+		266D3FA21B37DD6B0074F0CB /* Beaker2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 266D3FA01B37DD6B0074F0CB /* Beaker2.xcdatamodeld */; };
+		266D3FA41B37DD6B0074F0CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D3FA31B37DD6B0074F0CB /* ViewController.swift */; };
+		266D3FA71B37DD6B0074F0CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266D3FA51B37DD6B0074F0CB /* Main.storyboard */; };
+		266D3FA91B37DD6B0074F0CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266D3FA81B37DD6B0074F0CB /* Images.xcassets */; };
+		266D3FAC1B37DD6B0074F0CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266D3FAA1B37DD6B0074F0CB /* LaunchScreen.xib */; };
+		266D3FB81B37DD6B0074F0CB /* Beaker2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D3FB71B37DD6B0074F0CB /* Beaker2Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		266D3FB21B37DD6B0074F0CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 266D3F911B37DD6A0074F0CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 266D3F981B37DD6B0074F0CB;
+			remoteInfo = Beaker2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		266D3F991B37DD6B0074F0CB /* Beaker2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaker2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		266D3F9D1B37DD6B0074F0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		266D3F9E1B37DD6B0074F0CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		266D3FA11B37DD6B0074F0CB /* Beaker2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beaker2.xcdatamodel; sourceTree = "<group>"; };
+		266D3FA31B37DD6B0074F0CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		266D3FA61B37DD6B0074F0CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		266D3FA81B37DD6B0074F0CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		266D3FAB1B37DD6B0074F0CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		266D3FB11B37DD6B0074F0CB /* Beaker2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Beaker2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		266D3FB61B37DD6B0074F0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		266D3FB71B37DD6B0074F0CB /* Beaker2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beaker2Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		266D3F961B37DD6B0074F0CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		266D3FAE1B37DD6B0074F0CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		266D3F901B37DD6A0074F0CB = {
+			isa = PBXGroup;
+			children = (
+				266D3F9B1B37DD6B0074F0CB /* Beaker2 */,
+				266D3FB41B37DD6B0074F0CB /* Beaker2Tests */,
+				266D3F9A1B37DD6B0074F0CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		266D3F9A1B37DD6B0074F0CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				266D3F991B37DD6B0074F0CB /* Beaker2.app */,
+				266D3FB11B37DD6B0074F0CB /* Beaker2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		266D3F9B1B37DD6B0074F0CB /* Beaker2 */ = {
+			isa = PBXGroup;
+			children = (
+				266D3F9E1B37DD6B0074F0CB /* AppDelegate.swift */,
+				266D3FA31B37DD6B0074F0CB /* ViewController.swift */,
+				266D3FA51B37DD6B0074F0CB /* Main.storyboard */,
+				266D3FA81B37DD6B0074F0CB /* Images.xcassets */,
+				266D3FAA1B37DD6B0074F0CB /* LaunchScreen.xib */,
+				266D3FA01B37DD6B0074F0CB /* Beaker2.xcdatamodeld */,
+				266D3F9C1B37DD6B0074F0CB /* Supporting Files */,
+			);
+			path = Beaker2;
+			sourceTree = "<group>";
+		};
+		266D3F9C1B37DD6B0074F0CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				266D3F9D1B37DD6B0074F0CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		266D3FB41B37DD6B0074F0CB /* Beaker2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				266D3FB71B37DD6B0074F0CB /* Beaker2Tests.swift */,
+				266D3FB51B37DD6B0074F0CB /* Supporting Files */,
+			);
+			path = Beaker2Tests;
+			sourceTree = "<group>";
+		};
+		266D3FB51B37DD6B0074F0CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				266D3FB61B37DD6B0074F0CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		266D3F981B37DD6B0074F0CB /* Beaker2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 266D3FBB1B37DD6B0074F0CB /* Build configuration list for PBXNativeTarget "Beaker2" */;
+			buildPhases = (
+				266D3F951B37DD6B0074F0CB /* Sources */,
+				266D3F961B37DD6B0074F0CB /* Frameworks */,
+				266D3F971B37DD6B0074F0CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Beaker2;
+			productName = Beaker2;
+			productReference = 266D3F991B37DD6B0074F0CB /* Beaker2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		266D3FB01B37DD6B0074F0CB /* Beaker2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 266D3FBE1B37DD6B0074F0CB /* Build configuration list for PBXNativeTarget "Beaker2Tests" */;
+			buildPhases = (
+				266D3FAD1B37DD6B0074F0CB /* Sources */,
+				266D3FAE1B37DD6B0074F0CB /* Frameworks */,
+				266D3FAF1B37DD6B0074F0CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				266D3FB31B37DD6B0074F0CB /* PBXTargetDependency */,
+			);
+			name = Beaker2Tests;
+			productName = Beaker2Tests;
+			productReference = 266D3FB11B37DD6B0074F0CB /* Beaker2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		266D3F911B37DD6A0074F0CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Christopher Robison";
+				TargetAttributes = {
+					266D3F981B37DD6B0074F0CB = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					266D3FB01B37DD6B0074F0CB = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 266D3F981B37DD6B0074F0CB;
+					};
+				};
+			};
+			buildConfigurationList = 266D3F941B37DD6A0074F0CB /* Build configuration list for PBXProject "Beaker2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 266D3F901B37DD6A0074F0CB;
+			productRefGroup = 266D3F9A1B37DD6B0074F0CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				266D3F981B37DD6B0074F0CB /* Beaker2 */,
+				266D3FB01B37DD6B0074F0CB /* Beaker2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		266D3F971B37DD6B0074F0CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				266D3FA71B37DD6B0074F0CB /* Main.storyboard in Resources */,
+				266D3FAC1B37DD6B0074F0CB /* LaunchScreen.xib in Resources */,
+				266D3FA91B37DD6B0074F0CB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		266D3FAF1B37DD6B0074F0CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		266D3F951B37DD6B0074F0CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				266D3FA41B37DD6B0074F0CB /* ViewController.swift in Sources */,
+				266D3FA21B37DD6B0074F0CB /* Beaker2.xcdatamodeld in Sources */,
+				266D3F9F1B37DD6B0074F0CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		266D3FAD1B37DD6B0074F0CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				266D3FB81B37DD6B0074F0CB /* Beaker2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		266D3FB31B37DD6B0074F0CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 266D3F981B37DD6B0074F0CB /* Beaker2 */;
+			targetProxy = 266D3FB21B37DD6B0074F0CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		266D3FA51B37DD6B0074F0CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				266D3FA61B37DD6B0074F0CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		266D3FAA1B37DD6B0074F0CB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				266D3FAB1B37DD6B0074F0CB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		266D3FB91B37DD6B0074F0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		266D3FBA1B37DD6B0074F0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		266D3FBC1B37DD6B0074F0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Beaker2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		266D3FBD1B37DD6B0074F0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Beaker2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		266D3FBF1B37DD6B0074F0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Beaker2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beaker2.app/Beaker2";
+			};
+			name = Debug;
+		};
+		266D3FC01B37DD6B0074F0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Beaker2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beaker2.app/Beaker2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		266D3F941B37DD6A0074F0CB /* Build configuration list for PBXProject "Beaker2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				266D3FB91B37DD6B0074F0CB /* Debug */,
+				266D3FBA1B37DD6B0074F0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		266D3FBB1B37DD6B0074F0CB /* Build configuration list for PBXNativeTarget "Beaker2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				266D3FBC1B37DD6B0074F0CB /* Debug */,
+				266D3FBD1B37DD6B0074F0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		266D3FBE1B37DD6B0074F0CB /* Build configuration list for PBXNativeTarget "Beaker2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				266D3FBF1B37DD6B0074F0CB /* Debug */,
+				266D3FC01B37DD6B0074F0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		266D3FA01B37DD6B0074F0CB /* Beaker2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				266D3FA11B37DD6B0074F0CB /* Beaker2.xcdatamodel */,
+			);
+			currentVersion = 266D3FA11B37DD6B0074F0CB /* Beaker2.xcdatamodel */;
+			path = Beaker2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 266D3F911B37DD6A0074F0CB /* Project object */;
+}
