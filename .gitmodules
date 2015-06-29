@@ -1,0 +1,3 @@
+[submodule "Beaker2/conversant-sdk-ios"]
+	path = Beaker2/conversant-sdk-ios
+	url = http://crobison@stash.cnvrmedia.net/scm/agencymobile/conversant-sdk-ios.git
