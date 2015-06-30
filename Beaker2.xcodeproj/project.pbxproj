@@ -62,10 +62,6 @@
 		26BBDD951B3C8D53007759C1 /* BeakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBDD941B3C8D53007759C1 /* BeakerViewController.swift */; };
 		26F637161B4093DF000C2633 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F637151B4093DF000C2633 /* Global.swift */; };
 		26F6371C1B41F0DE000C2633 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F6371B1B41F0DE000C2633 /* DataManager.swift */; };
-		26F6376B1B420B49000C2633 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F6376A1B420B49000C2633 /* Defaults.swift */; };
-		26F6376D1B420B4A000C2633 /* AdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F6376C1B420B4A000C2633 /* AdTest.swift */; };
-		26F6376F1B420B4A000C2633 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F6376E1B420B4A000C2633 /* Test.swift */; };
-		26F637711B420B4A000C2633 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F637701B420B4A000C2633 /* Tests.swift */; };
 		26F637731B421F3E000C2633 /* mraid-tests.beautified.js in Resources */ = {isa = PBXBuildFile; fileRef = 26F637721B421F3E000C2633 /* mraid-tests.beautified.js */; };
 		26F637751B421F56000C2633 /* mraid-tests.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F637741B421F56000C2633 /* mraid-tests.json */; };
 		26F637771B421F96000C2633 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F637761B421F96000C2633 /* SwiftyJSON.swift */; };
@@ -157,10 +153,6 @@
 		26F637151B4093DF000C2633 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		26F6371B1B41F0DE000C2633 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		26F637611B420776000C2633 /* Beaker 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Beaker 2.xcdatamodel"; sourceTree = "<group>"; };
-		26F6376A1B420B49000C2633 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		26F6376C1B420B4A000C2633 /* AdTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdTest.swift; sourceTree = "<group>"; };
-		26F6376E1B420B4A000C2633 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		26F637701B420B4A000C2633 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		26F637721B421F3E000C2633 /* mraid-tests.beautified.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "mraid-tests.beautified.js"; sourceTree = "<group>"; };
 		26F637741B421F56000C2633 /* mraid-tests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mraid-tests.json"; sourceTree = "<group>"; };
 		26F637761B421F96000C2633 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -264,10 +256,6 @@
 		266D3F9B1B37DD6B0074F0CB /* Beaker2 */ = {
 			isa = PBXGroup;
 			children = (
-				26F637701B420B4A000C2633 /* Tests.swift */,
-				26F6376E1B420B4A000C2633 /* Test.swift */,
-				26F6376C1B420B4A000C2633 /* AdTest.swift */,
-				26F6376A1B420B49000C2633 /* Defaults.swift */,
 				266D3F9E1B37DD6B0074F0CB /* AppDelegate.swift */,
 				266D3FA31B37DD6B0074F0CB /* ViewController.swift */,
 				260EC5011B3DB804004FAB3B /* SettingsViewController.swift */,
@@ -487,16 +475,12 @@
 			files = (
 				266D3FA41B37DD6B0074F0CB /* ViewController.swift in Sources */,
 				266D3FA21B37DD6B0074F0CB /* Beaker2.xcdatamodeld in Sources */,
-				26F6376D1B420B4A000C2633 /* AdTest.swift in Sources */,
 				26F637771B421F96000C2633 /* SwiftyJSON.swift in Sources */,
 				26F637161B4093DF000C2633 /* Global.swift in Sources */,
-				26F637711B420B4A000C2633 /* Tests.swift in Sources */,
-				26F6376F1B420B4A000C2633 /* Test.swift in Sources */,
 				26F6371C1B41F0DE000C2633 /* DataManager.swift in Sources */,
 				266D3F9F1B37DD6B0074F0CB /* AppDelegate.swift in Sources */,
 				260EC5021B3DB805004FAB3B /* SettingsViewController.swift in Sources */,
 				26BBDD951B3C8D53007759C1 /* BeakerViewController.swift in Sources */,
-				26F6376B1B420B49000C2633 /* Defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

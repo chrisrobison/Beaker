@@ -9,10 +9,13 @@ import CoreData
 import Foundation
 import UIKit
 
-class BeakerViewController: UIViewController {
+class BeakerViewController: UIViewController, GSAdDelegate {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var bannerView: GSMobileBannerAdView?
-    let greystripeGUID = "51d7ee3c-95fd-48d5-b648-c915209a00a5"
+    
+    func greystripeGUID() -> String {
+        return "51d7ee3c-95fd-48d5-b648-c915209a00a5"
+    }
     
     func greystripeBannerDisplayViewController() -> UIViewController {
         return self
@@ -26,7 +29,7 @@ class BeakerViewController: UIViewController {
         toggleFetchingIndicator(bannerActivityIndicator, on: true)
         var size = self.bannerParent.frame.size
         if self.bannerView == nil {
-            self.bannerView = GSMobileBannerAdView()
+            self.bannerView = GSMobileBannerAdView(delegate: self)
             self.bannerView!.frame = CGRectMake(0, 0, size.width, size.height)
             self.bannerParent.addSubview(self.bannerView!)
         }
