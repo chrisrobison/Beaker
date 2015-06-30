@@ -9,22 +9,38 @@ import CoreData
 import Foundation
 import UIKit
 
-
 class BeakerViewController: UIViewController {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var bannerView: GSMobileBannerAdView?
+    let greystripeGUID = "51d7ee3c-95fd-48d5-b648-c915209a00a5"
     
+    func greystripeBannerDisplayViewController() -> UIViewController {
+        return self
+    }
+    
+    @IBOutlet weak var bannerParent: GSBannerAdView!
+    @IBAction func fetchInterstitialAd(sender: AnyObject) {
+    }
+    
+    @IBAction func fetchBannerAd(sender: UIButton) {
+        toggleFetchingIndicator(bannerActivityIndicator, on: true)
+        var size = self.bannerParent.frame.size
+        if self.bannerView == nil {
+            self.bannerView = GSMobileBannerAdView()
+            self.bannerView!.frame = CGRectMake(0, 0, size.width, size.height)
+            self.bannerParent.addSubview(self.bannerView!)
+        }
+    }
+    
+    @IBOutlet weak var interstitialActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var bannerActivityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.hidden = true
         
-        var ad = GSSDKInfo()
-        var x = GSAdModel()
-       /* let newItem = NSEntityDescription.insertNewObjectForEntityForName("AdTest", inManagedObjectContext: self.managedObjectContext!) as! AdTest
-        newItem.setName = "Cobalt MRAID Tests"
-        newItem.notes = "Notes!"
-*/
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -33,23 +49,12 @@ class BeakerViewController: UIViewController {
         
         self.navigationController?.automaticallyAdjustsScrollViewInsets = false
         
-        /*
-        let fetchRequest = NSFetchRequest(entityName: "AdTest")
-        
-        // Execute the fetch request, and cast the results to an array of LogItem objects
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [AdTest] {
-            
-            // Create an Alert, and set it's message to whatever the itemText is
-            let alert = UIAlertController(title: fetchResults[0].setName,
-                message: fetchResults[0].notes,
-                preferredStyle: .Alert)
-            
-            // Display the alert
-            self.presentViewController(alert,
-                animated: true,
-                completion: nil)
-        }
-*/
+
+    }
+    
+    func toggleFetchingIndicator(spinner:UIActivityIndicatorView, on:Bool) {
+        on ? spinner.startAnimating() : spinner.stopAnimating()
+        spinner.hidden = !on
     }
     
     override func didReceiveMemoryWarning() {

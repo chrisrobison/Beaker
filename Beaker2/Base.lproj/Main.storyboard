@@ -17,9 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ek-HP-EtD" customClass="GSAdWebView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ek-HP-EtD" customClass="GSMobileBannerAdView">
                                 <rect key="frame" x="0.0" y="486" width="600" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UUE-lF-WWe" id="bUO-U9-lPu"/>
+                                </connections>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRn-WA-Ej3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="488"/>
@@ -92,6 +95,9 @@
                                                 <state key="disabled">
                                                     <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="fetchInterstitialAd:" destination="UUE-lF-WWe" eventType="touchUpInside" id="MDa-6F-7Ux"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-FS-eZf">
                                                 <rect key="frame" x="20" y="488" width="36" height="36"/>
@@ -104,9 +110,6 @@
                                                     <color key="titleColor" red="0.79215686269999996" green="0.58431372550000005" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="56e-bq-s3O">
-                                                <rect key="frame" x="291" y="149" width="20" height="20"/>
-                                            </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdB-8o-hYP">
                                                 <rect key="frame" x="520" y="181" width="62" height="30"/>
                                                 <state key="normal" title="Fetch Ad">
@@ -116,6 +119,9 @@
                                                 <state key="disabled">
                                                     <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="fetchBannerAd:" destination="UUE-lF-WWe" eventType="touchUpInside" id="PTf-Vy-EPy"/>
+                                                </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-AI-XNW">
                                                 <rect key="frame" x="20" y="134" width="562" height="2"/>
@@ -123,9 +129,6 @@
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZvK-cG-3xi">
                                                 <rect key="frame" x="20" y="220" width="562" height="2"/>
                                             </progressView>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="QNJ-pf-O8D">
-                                                <rect key="frame" x="291" y="187" width="20" height="20"/>
-                                            </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3A-xc-edX">
                                                 <rect key="frame" x="20" y="383" width="172" height="30"/>
                                                 <constraints>
@@ -170,6 +173,12 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="56e-bq-s3O">
+                                                <rect key="frame" x="291" y="149" width="20" height="20"/>
+                                            </activityIndicatorView>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="QNJ-pf-O8D">
+                                                <rect key="frame" x="291" y="187" width="20" height="20"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.062745098040000002" green="0.094117647060000004" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -254,6 +263,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="x9Y-Fu-a5S"/>
+                    <connections>
+                        <outlet property="bannerActivityIndicator" destination="QNJ-pf-O8D" id="zj6-xk-eqI"/>
+                        <outlet property="bannerParent" destination="3ek-HP-EtD" id="baZ-ge-l8s"/>
+                        <outlet property="interstitialActivityIndicator" destination="56e-bq-s3O" id="RzL-cz-HkZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2eG-JK-Hkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
