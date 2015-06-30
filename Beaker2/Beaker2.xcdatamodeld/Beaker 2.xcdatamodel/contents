@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="AdTests" representedClassName="Beaker2.AdTests" syncable="YES">
-        <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="AdTest" representedClassName="Beaker2.AdTest" syncable="YES">
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="setName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="tests" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tests" inverseName="test" inverseEntity="Tests" syncable="YES"/>
+        <relationship name="tests" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tests" syncable="YES"/>
     </entity>
-    <entity name="Defaults" representedClassName="PRODUCT_MODULE_NAME.Defaults" parentEntity="AdTests" syncable="YES">
+    <entity name="Defaults" representedClassName="Beaker2.Defaults" parentEntity="AdTest" syncable="YES">
         <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ipv4" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sendGPS" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="server" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="useBudget" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="useFrequencyCapping" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="testDefaults" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AdTests" syncable="YES"/>
+        <relationship name="testDefaults" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AdTest" syncable="YES"/>
     </entity>
-    <entity name="Test" representedClassName="PRODUCT_MODULE_NAME.Test" parentEntity="Tests" syncable="YES">
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Test" representedClassName="Beaker2.Test" parentEntity="Tests" syncable="YES">
         <attribute name="mid" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="sendGps" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tests" syncable="YES"/>
+        <attribute name="testNotes" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Tests" representedClassName="PRODUCT_MODULE_NAME.Tests" isAbstract="YES" parentEntity="AdTests" syncable="YES">
-        <relationship name="test" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Test" inverseName="tests" inverseEntity="AdTests" syncable="YES"/>
+    <entity name="Tests" representedClassName="Beaker2.Tests" isAbstract="YES" parentEntity="AdTest" syncable="YES">
+        <relationship name="test" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Test" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AdTests" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="AdTest" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="Defaults" positionX="-65" positionY="153" width="128" height="148"/>
+        <element name="Test" positionX="189" positionY="162" width="128" height="103"/>
         <element name="Tests" positionX="187" positionY="36" width="128" height="58"/>
-        <element name="Test" positionX="189" positionY="162" width="128" height="118"/>
     </elements>
 </model>

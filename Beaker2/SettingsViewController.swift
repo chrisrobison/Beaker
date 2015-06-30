@@ -34,15 +34,13 @@ class SettingsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.hidden = false
+        
         boolItems = ["GPSSwitch":GPSSwitch, "fetchMIDSwitch":fetchMIDSwitch, "overrideGeotargeting":overrideGeotargeting, "overrideBudgetCap": overrideBudgetCap, "overrideFrequencyCap": overrideFrequencyCap, "spoofIPSwitch": spoofIPSwitch]
         stringItems = ["serverLabel":serverLabel, "serverDetail": serverDetail, "appLabel": appLabel, "appDetail": appDetail, "spoofIPInput": spoofIPInput, "MIDTextInput": MIDTextInput]
         numberItems = ["serverMode": serverMode]
-        // Do any additional setup after loading the view, typically from a nib.
-        //        var ad = GSSDKInfo()
+        
         var ad = GSAdModel()
-        
-        var test = GSBannerAdView()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,10 +62,47 @@ class SettingsViewController: UITableViewController {
             NSUserDefaults.standardUserDefaults().setValue(x.text, forKey: key)
         }
         
+        for (key, item) in numberItems {
+            var x = item as! UITextField
+            NSUserDefaults.standardUserDefaults().setInteger(x.text.toInt()!, forKey: key)
+        }
     }
     
     func restorePrefs() {
-        
+        var firstRun : Bool? = !NSUserDefaults.standardUserDefaults().boolForKey("firstrun")
+        for (key, item) in boolItems {
+            var state : Bool? = NSUserDefaults.standardUserDefaults().boolForKey(key)
+            if firstRun! || state == nil {
+                state = true
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: key)
+                core.data.prefs[key] = true
+            }
+            //println("bgmusic: \(bgmusicState)")
+            item.on = state!
+        }
+        for (key, item) in stringItems {
+            var state : String? = NSUserDefaults.standardUserDefaults().valueForKey(key) as? String
+            if firstRun! || state == nil {
+                state = ""
+                NSUserDefaults.standardUserDefaults().setObject(state, forKey: key)
+                core.data.prefs[key] = ""
+            }
+            //println("bgmusic: \(bgmusicState)")
+            var x = item as! UITextField
+            x.text = state
+        }
+        for (key, item) in numberItems {
+            var state : Int? = NSUserDefaults.standardUserDefaults().integerForKey(key)
+            if firstRun! || state == nil {
+                state = 0
+                NSUserDefaults.standardUserDefaults().setInteger(state!, forKey: key)
+                core.data.prefs[key] = 0
+            }
+            var x = item as! UISegmentedControl
+            x.selectedSegmentIndex = state!
+        }
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstrun")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
 }
