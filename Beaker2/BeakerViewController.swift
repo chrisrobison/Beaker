@@ -5,7 +5,6 @@
 //  Created by Christopher Robison on 6/25/15.
 //  Copyright (c) 2015 Christopher Robison. All rights reserved.
 //
-import CoreData
 import Foundation
 import UIKit
 
@@ -13,16 +12,29 @@ class BeakerViewController: UIViewController, GSAdDelegate {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var bannerView: GSMobileBannerAdView?
     var fullscreenAd: GSFullscreenAd?
+    var config:DataManager?
+    var test = [String:JSON]()
     
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var serverLabel: UILabel!
     @IBOutlet weak var bannerButton: UIButton!
     @IBOutlet weak var interstitialButton: UIButton!
+    @IBOutlet weak var notesView: UITextView!
+    @IBOutlet weak var guidLabel: UILabel!
+    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var adDetails: UIView!
+    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var adID: UILabel!
     @IBOutlet weak var interstitialActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var bannerActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var bannerParent: GSBannerAdView!
+    
+    /**
+    * Called when "Fetch Ad" *interstitial* button is tapped
+    *
+    * @param sender The button that was pressed
+    */
     @IBAction func fetchInterstitialAd(sender: UIButton) {
-        println("button title: \(sender.titleLabel)")
         if sender.titleLabel!.text != "Display" {
             fetchFullScreenAd()
         } else {
@@ -30,18 +42,24 @@ class BeakerViewController: UIViewController, GSAdDelegate {
         }
     }
     
+    /**
+    * Called when "Fetch Ad" banner button is tapped
+    *
+    * @param sender The button that was pressed
+    */
     @IBAction func fetchBannerAd(sender: UIButton) {
         toggleFetchingIndicator(bannerActivityIndicator, on: true)
+        
         var size = self.bannerParent.frame.size
         if self.bannerView == nil {
             self.bannerView = GSMobileBannerAdView(delegate: self)
             self.bannerView!.frame = CGRectMake(0, 0, size.width, size.height)
             self.bannerParent.addSubview(self.bannerView!)
         }
+        guidLabel.text = "GUID: \(greystripeGUID())"
+        
     }
     
-
-    @IBOutlet weak var adID: UILabel!
     /**
     * Sent when an ad has successfully been fetched and is ready to be displayed.
     *
@@ -59,6 +77,34 @@ class BeakerViewController: UIViewController, GSAdDelegate {
         }
     }
    
+        func greystripeGUID() -> String {
+        var guid = core.data.config["defaults"]["guid"].stringValue
+        if guid == "" {
+            guid = "51d7ee3c-95fd-48d5-b648-c915209a00a5"
+        }
+        return guid
+    }
+    
+    func greystripeBannerDisplayViewController() -> UIViewController {
+        return self
+    }
+    
+    func fetchFullScreenAd() {
+        if !fullscreenAd!.isAdReady() {
+            toggleFetchingIndicator(interstitialActivityIndicator, on: true)
+            fullscreenAd?.fetch()
+        }
+    }
+    
+    func displayFullScreenAd() {
+        fullscreenAd?.displayFromViewController(self)
+        interstitialButton.setTitle("Fetch Ad", forState: .Normal)
+    }
+    
+    func toggleFetchingIndicator(spinner:UIActivityIndicatorView, on:Bool) {
+        on ? spinner.startAnimating() : spinner.stopAnimating()
+        spinner.hidden = !on
+    }
     
     /**
     * Sent if the ad fetch request failed.
@@ -131,53 +177,33 @@ class BeakerViewController: UIViewController, GSAdDelegate {
     
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationController?.navigationBar.hidden = true
         
         // Replace these with references to config
-        serverLabel.text = "Cobalt [Production]"
+        serverLabel.text = core.data.config["setName"].stringValue
         appNameLabel.text = "CNVR Ops iOS Test App"
         fullscreenAd = GSFullscreenAd(delegate: self)
         
+        if (test["name"]?.string == nil) {
+            test = core.data.config["tests"][0].dictionaryValue
+        }
+        
+        notesView.text = test["notes"]?.stringValue
+        testLabel.text = test["name"]?.stringValue
+        guidLabel.text = greystripeGUID()
+        
+        toggleFetchingIndicator(bannerActivityIndicator, on: false)
+        toggleFetchingIndicator(interstitialActivityIndicator, on: false)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.hidden = true
         
-        self.navigationController?.automaticallyAdjustsScrollViewInsets = false
-        
+    }
+    
 
-    }
-    
-    func greystripeGUID() -> String {
-        return "51d7ee3c-95fd-48d5-b648-c915209a00a5"
-    }
-    
-    func greystripeBannerDisplayViewController() -> UIViewController {
-        return self
-    }
-    
-    func fetchFullScreenAd() {
-        if !fullscreenAd!.isAdReady() {
-            toggleFetchingIndicator(interstitialActivityIndicator, on: true)
-            fullscreenAd?.fetch()
-        }
-    }
-    
-    func displayFullScreenAd() {
-        fullscreenAd?.displayFromViewController(self)
-        interstitialButton.setTitle("Fetch Ad", forState: .Normal)
-    }
-    
-    func toggleFetchingIndicator(spinner:UIActivityIndicatorView, on:Bool) {
-        on ? spinner.startAnimating() : spinner.stopAnimating()
-        spinner.hidden = !on
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

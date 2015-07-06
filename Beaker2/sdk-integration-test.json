@@ -1,0 +1,15 @@
+{
+    "setName": "Conversant iOS SDK Integration Tests",
+    "defaults": {
+        "server": "http://adsx.greystripe.com/openx/www/delivery/ia.php",
+        "guid": "51d7ee3c-95fd-48d5-b648-c915209a00a5",
+        "useBudget": false,
+        "useFrequencyCapping": false,
+        "ipv4": "123.45.67.89",
+        "sendGps": false
+    },
+    "tests": [{
+        "name": "Integration test",
+        "notes": "Should display generic Conversant ad."
+    }]
+}

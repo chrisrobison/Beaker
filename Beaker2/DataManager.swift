@@ -9,10 +9,22 @@
 import Foundation
 
 class DataManager {
-    var prefs = [String:AnyObject]()
+    var prefs = [String:AnyObject](),
+        state = [String:AnyObject](),
+        config:JSON,
+        loaded:Bool
     
+    init(filename:String, filetype:String) {
+        var path = NSBundle.mainBundle().pathForResource(filename, ofType: filetype),
+        url      = NSURL(fileURLWithPath: path!),
+        data     = NSData(contentsOfURL: url!),
+        content  = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as? [[String: AnyObject]]
+        
+        self.config = JSON(data: data!)
+        self.loaded = true
+    }
     
-    class func loadDataFromFile(filename:String, filetype:String, success: ((data: NSData) -> Void)) {
+    class func loadDataFromFileWithSuccess(filename:String, filetype:String, success: ((data: NSData) -> Void)) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             let filePath = NSBundle.mainBundle().pathForResource(filename, ofType:filetype)
             

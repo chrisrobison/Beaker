@@ -65,6 +65,8 @@
 		26F637731B421F3E000C2633 /* mraid-tests.beautified.js in Resources */ = {isa = PBXBuildFile; fileRef = 26F637721B421F3E000C2633 /* mraid-tests.beautified.js */; };
 		26F637751B421F56000C2633 /* mraid-tests.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F637741B421F56000C2633 /* mraid-tests.json */; };
 		26F637771B421F96000C2633 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F637761B421F96000C2633 /* SwiftyJSON.swift */; };
+		26F637AD1B449E3B000C2633 /* sdk-integration-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F637AC1B449E3B000C2633 /* sdk-integration-test.json */; };
+		26F637B21B45ADE7000C2633 /* SelectTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F637B11B45ADE7000C2633 /* SelectTestTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +158,8 @@
 		26F637721B421F3E000C2633 /* mraid-tests.beautified.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "mraid-tests.beautified.js"; sourceTree = "<group>"; };
 		26F637741B421F56000C2633 /* mraid-tests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mraid-tests.json"; sourceTree = "<group>"; };
 		26F637761B421F96000C2633 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		26F637AC1B449E3B000C2633 /* sdk-integration-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sdk-integration-test.json"; sourceTree = "<group>"; };
+		26F637B11B45ADE7000C2633 /* SelectTestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTestTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 				266D3FA31B37DD6B0074F0CB /* ViewController.swift */,
 				260EC5011B3DB804004FAB3B /* SettingsViewController.swift */,
 				26BBDD941B3C8D53007759C1 /* BeakerViewController.swift */,
+				26F637B11B45ADE7000C2633 /* SelectTestTableViewController.swift */,
 				260EC4991B3CDAD5004FAB3B /* ConversantBridgingHeader.h */,
 				26F6371B1B41F0DE000C2633 /* DataManager.swift */,
 				26F637151B4093DF000C2633 /* Global.swift */,
@@ -267,6 +272,7 @@
 				266D3FA51B37DD6B0074F0CB /* Main.storyboard */,
 				26F637721B421F3E000C2633 /* mraid-tests.beautified.js */,
 				26F637741B421F56000C2633 /* mraid-tests.json */,
+				26F637AC1B449E3B000C2633 /* sdk-integration-test.json */,
 				26F637761B421F96000C2633 /* SwiftyJSON.swift */,
 				266D3FAA1B37DD6B0074F0CB /* LaunchScreen.xib */,
 				266D3FA01B37DD6B0074F0CB /* Beaker2.xcdatamodeld */,
@@ -381,7 +387,7 @@
 				TargetAttributes = {
 					266D3F981B37DD6B0074F0CB = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 867N5BVX7Y;
+						DevelopmentTeam = J55J8TR7XY;
 					};
 					266D3FB01B37DD6B0074F0CB = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -430,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BBDD891B3C4E0A007759C1 /* warning.png in Resources */,
+				26F637AD1B449E3B000C2633 /* sdk-integration-test.json in Resources */,
 				26BBDD721B3C4DFD007759C1 /* game_iphone1.png in Resources */,
 				266D3FA71B37DD6B0074F0CB /* Main.storyboard in Resources */,
 				26BBDD751B3C4DFD007759C1 /* Wrench_4.png in Resources */,
@@ -474,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				266D3FA41B37DD6B0074F0CB /* ViewController.swift in Sources */,
+				26F637B21B45ADE7000C2633 /* SelectTestTableViewController.swift in Sources */,
 				266D3FA21B37DD6B0074F0CB /* Beaker2.xcdatamodeld in Sources */,
 				26F637771B421F96000C2633 /* SwiftyJSON.swift in Sources */,
 				26F637161B4093DF000C2633 /* Global.swift in Sources */,
@@ -620,6 +628,7 @@
 					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
 				);
 				INFOPLIST_FILE = Beaker2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,6 +652,7 @@
 					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
 				);
 				INFOPLIST_FILE = Beaker2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

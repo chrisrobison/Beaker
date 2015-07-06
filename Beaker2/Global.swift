@@ -17,10 +17,11 @@ import Foundation
 class Core {
     var name:String
     var prefs = [String:AnyObject]()
-    let data = DataManager()
+    var data:DataManager
     
     init(name:String) {
         self.name = name
+        self.data = DataManager(filename: "mraid-tests", filetype:"json")
     }
     
 

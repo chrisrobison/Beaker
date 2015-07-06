@@ -11,23 +11,23 @@
     "tests": [{
         "name": "getCurrentPosition",
         "mid": "1239188",
-        "notes": "should return current ad position x,y relative to getMaxSize Dimensions"
+        "notes": "Should return current ad position x,y relative to getMaxSize Dimensions"
     }, {
         "name": "getDefaultPosition",
         "mid": "1243767",
-        "notes": "should return default ad position x,y relative to getMaxSize Dimensions"
+        "notes": "Should return default ad position x,y relative to getMaxSize Dimensions"
     }, {
         "name": "getMaxSize",
         "mid": "1243768",
-        "notes": "will return available screen size in pixels minus tool\/status bars"
+        "notes": "Should return available screen size in pixels minus tool/status bars"
     }, {
         "name": "getPlacementType",
         "mid": "1243771",
-        "notes": "return placement type: inline"
+        "notes": "Return placement type: inline"
     }, {
         "name": "getScreenSize",
         "mid": "1243772",
-        "notes": "return total screen size in pixels"
+        "notes": "Return total screen size in pixels"
     }, {
         "name": "open",
         "mid": "1243773",
@@ -39,35 +39,35 @@
     }, {
         "name": "resize - Allow Offscreen",
         "mid": "1243775",
-        "notes": "when set to true will allow the ad to resize offscreen, when false ad should resize centered"
+        "notes": "When set to true will allow the ad to resize offscreen, when false ad should resize centered"
     }, {
-        "name": "resize - Custom Close Positions",
+        "name": "Resize - Custom Close Positions",
         "mid": "1243778",
-        "notes": "should resize with custom close in indicated area"
+        "notes": "Should resize with custom close in indicated area"
     }, {
         "name": "resize - Simple",
         "mid": "1243779",
-        "notes": "resize ad as shown in icons with partial screen dimensions"
+        "notes": "Resize ad as shown in icons with partial screen dimensions"
     }, {
-        "name": "setExpandProperties- All Params",
+        "name": "setExpandProperties - All Params",
         "mid": "1243780",
-        "notes": "should set the following properties: width:288,height:292,useCustomClose:true,isModal:true\\nNote: isModal is read only\n"
+        "notes": "Should set the following properties: width:288,height:292,useCustomClose:true,isModal:true\nNote: isModal is read only\n"
     }, {
-        "name": "setExpandProperties- String Vs. Boolean",
+        "name": "setExpandProperties - String Vs. Boolean",
         "mid": "1243794",
-        "notes": "set the following properties: width:288,height:292,useCustomClose:'true'\\nNote: In our SDK, should translate string 'true' to boolean true.\n"
+        "notes": "Set the following properties: width:288,height:292,useCustomClose:'true'\nNote: In our SDK, should translate string 'true' to boolean true.\n"
     }, {
-        "name": "setExpandProperties- String Vs. Integer",
+        "name": "setExpandProperties - String Vs. Integer",
         "mid": "1243795",
-        "notes": "should set the following properties: width:'288',height:'292',useCustomClose:true\\nNote: In our SDK, should fail to change because values are not numbers\n"
+        "notes": "Should set the following properties: width:'288',height:'292',useCustomClose:true\nNote: In our SDK, should fail to change because values are not numbers\n"
     }, {
-        "name": "setExpandProperties- Width",
+        "name": "setExpandProperties - Width",
         "mid": "1243796",
-        "notes": "should set expand width to 288px"
+        "notes": "Should set expand width to 288px"
     }, {
-        "name": "setExpandProperties- Width Height",
+        "name": "setExpandProperties - Width Height",
         "mid": "1243797",
-        "notes": "should set expand height \/ width to width:288\/height:292"
+        "notes": "Should set expand height / width to width:288\/height:292"
     }, {
         "name": "setExpandProperties- Width Height UCC",
         "mid": "1243798",
@@ -83,7 +83,7 @@
     }, {
         "name": "setOrientationProperties - Bad Params",
         "mid": "1243802",
-        "notes": "param \"pineapple\" should not be accepted"
+        "notes": "Param 'pineapple' should not be accepted"
     }, {
         "name": "setOrientationProperties - Force Orientation",
         "mid": "1243804",
@@ -91,7 +91,7 @@
     }, {
         "name": "setOrientationProperties - String Vs. Boolean",
         "mid": "1243805",
-        "notes": "attempt set values: allowOrientationChange:'false',forceOrientation:'portrait'\\nNote: should either fail to set or translate string value into boolean\n"
+        "notes": "attempt set values: allowOrientationChange:'false',forceOrientation:'portrait'\nNote: should either fail to set or translate string value into boolean\n"
     }, {
         "name": "setResizeProperties - All Params",
         "mid": "1243806",
@@ -99,15 +99,15 @@
     }, {
         "name": "setResizeProperties - Bad Allow Offscreen",
         "mid": "1243807",
-        "notes": "attempt to set values: width:295,height:290,offsetX:7,offsetY:8,customClosePosition:'top-left',allowOffscreen:'pineapple'\\nNote: should not accept bad param \"pineapple\"\n"
+        "notes": "attempt to set values: width:295,height:290,offsetX:7,offsetY:8,customClosePosition:'top-left',allowOffscreen:'pineapple'\nNote: should not accept bad param \"pineapple\"\n"
     }, {
         "name": "setResizeProperties - Bad CCP Value",
         "mid": "1243808",
-        "notes": "attempt to set values: width:295,height:290,offsetX:7,offsetY:8,customClosePosition:'pineapple',allowOffscreen:'false'\\nNote: should not accept bad param \"pineapple\"\n"
+        "notes": "attempt to set values: width:295,height:290,offsetX:7,offsetY:8,customClosePosition:'pineapple',allowOffscreen:'false'\nNote: should not accept bad param \"pineapple\"\n"
     }, {
         "name": "setResizeProperties - Omit Some Required",
         "mid": "1243809",
-        "notes": "attempt to set values: width:295,offsetY:8\\nNote incomplete values, should not set\n"
+        "notes": "attempt to set values: width:295,offsetY:8\nNote incomplete values, should not set\n"
     }, {
         "name": "setResizeProperties - Required Only",
         "mid": "1243810",
@@ -115,11 +115,11 @@
     }, {
         "name": "setResizeProperties - String Vs. Boolean",
         "mid": "1243811",
-        "notes": "attempt to set values: width:295,height:290,offsetX:7,offsetY:8,customClosePosition:'top-left',allowOffscreen:'false'\\nNote: Our SDK refuses the change to allowOffscreen because of the string 'false'\n"
+        "notes": "attempt to set values: width:295,height:290,offsetX:7,offsetY:8,customClosePosition:'top-left',allowOffscreen:'false'\nNote: Our SDK refuses the change to allowOffscreen because of the string 'false'\n"
     }, {
         "name": "setResizeProperties - String Vs. Integer",
         "mid": "1243812",
-        "notes": "attempt to set values: width:'295',height:'290',offsetX:'7',offsetY:'8',customClosePosition:'top-left',allowOffscreen:false\\nShould fail to set or translate string values to int.\n"
+        "notes": "attempt to set values: width:'295',height:'290',offsetX:'7',offsetY:'8',customClosePosition:'top-left',allowOffscreen:false\nShould fail to set or translate string values to int.\n"
     }, {
         "name": "setResizeProperties - Too Big \/ Too Small",
         "mid": "1243813",
