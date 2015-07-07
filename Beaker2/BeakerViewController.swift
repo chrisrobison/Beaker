@@ -77,10 +77,13 @@ class BeakerViewController: UIViewController, GSAdDelegate {
         }
     }
    
-        func greystripeGUID() -> String {
+    func greystripeGUID() -> String {
         var guid = core.data.config["defaults"]["guid"].stringValue
         if guid == "" {
             guid = "51d7ee3c-95fd-48d5-b648-c915209a00a5"
+        }
+        if self.test["guid"] != nil {
+            guid = self.test["guid"]!.stringValue
         }
         return guid
     }

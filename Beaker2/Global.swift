@@ -21,7 +21,7 @@ class Core {
     
     init(name:String) {
         self.name = name
-        self.data = DataManager(filename: "mraid-tests", filetype:"json")
+        self.data = DataManager(filename: "mraid-tests.beautified", filetype:"js")
     }
     
 

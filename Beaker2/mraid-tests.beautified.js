@@ -9,13 +9,18 @@
         "sendGps": false
     },
     "tests": [{
+        "name": "Integration Test-Standard integration test GUID",
+        "guid": "51d7ee3c-95fd-48d5-b648-c915209a00a5",
+        "notes": "Should load generic Conversant themed ad."
+    }, {
+    
         "name": "getCurrentPosition",
         "mid": "1239188",
-        "notes": "Should return current ad position x,y relative to getMaxSize Dimensions"
+        "notes": "Should return current ad position x,y relative to getMaxSize dimensions"
     }, {
         "name": "getDefaultPosition",
         "mid": "1243767",
-        "notes": "Should return default ad position x,y relative to getMaxSize Dimensions"
+        "notes": "Should return default ad position x,y relative to getMaxSize dimensions"
     }, {
         "name": "getMaxSize",
         "mid": "1243768",
